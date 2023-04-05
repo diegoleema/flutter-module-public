@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     # s.source_files = 'Classes/**/*'
     # s.public_header_files = 'Classes/**/*.h'
     # s.dependency 'Flutter'
-    s.vendored_frameworks = 'Flutter.framework'
+    s.vendored_frameworks = 'Flutter.framework', 'FlutterPluginRegistrant.xcframework', 'App.xcframework'
     # s.source_files = '*'
     # s.source_files = 'Classes//*{.h,.a,.swift,.mm,.m,.hpp}'
     # s.xcconfig = { 
