@@ -16,7 +16,8 @@ Pod::Spec.new do |s|
     # s.source_files = 'Classes/**/*'
     # s.public_header_files = 'Classes/**/*.h'
     s.dependency 'Flutter'
-    s.source_files = 'Classes//*{.h,.a,.swift,.mm,.m,.hpp}'
+    s.source_files = '*'
+    # s.source_files = 'Classes//*{.h,.a,.swift,.mm,.m,.hpp}'
     s.xcconfig = { 
       # here on LDFLAG, I had to set -l and then the library name (without lib prefix although the file name has it).
       # 'OTHER_LDFLAGS' => '-framework opencv2 -lc++ -lAccuraFace -lAccuraEmirate -lDocRecog -lz',
