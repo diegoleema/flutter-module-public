@@ -15,13 +15,14 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '12.0'
     # s.source_files = 'Classes/**/*'
     # s.public_header_files = 'Classes/**/*.h'
-    s.dependency 'Flutter'
-    s.source_files = '*'
+    # s.dependency 'Flutter'
+    s.vendored_frameworks = 'Flutter.framework'
+    # s.source_files = '*'
     # s.source_files = 'Classes//*{.h,.a,.swift,.mm,.m,.hpp}'
-    s.xcconfig = { 
-      # here on LDFLAG, I had to set -l and then the library name (without lib prefix although the file name has it).
-      # 'OTHER_LDFLAGS' => '-framework opencv2 -lc++ -lAccuraFace -lAccuraEmirate -lDocRecog -lz',
-      'USER_HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/.."/',
-      "LIBRARY_SEARCH_PATHS" => '"${PROJECT_DIR}/.."/*',
-    }
+    # s.xcconfig = { 
+    #   # here on LDFLAG, I had to set -l and then the library name (without lib prefix although the file name has it).
+    #   # 'OTHER_LDFLAGS' => '-framework opencv2 -lc++ -lAccuraFace -lAccuraEmirate -lDocRecog -lz',
+    #   'USER_HEADER_SEARCH_PATHS' => '"${PROJECT_DIR}/.."/',
+    #   "LIBRARY_SEARCH_PATHS" => '"${PROJECT_DIR}/.."/*',
+    # }
   end
